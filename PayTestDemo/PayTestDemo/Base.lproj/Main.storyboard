@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="p4O-5S-cQa">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!-- 支付宝测试-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="APViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Vsc-0g-flf">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="CEh-xb-GrJ"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="hnE-vH-qlr"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Vsc-0g-flf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="LYK-cG-GVV"/>
+                            <constraint firstItem="Vsc-0g-flf" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="WOF-0z-GRG"/>
+                            <constraint firstAttribute="trailing" secondItem="Vsc-0g-flf" secondAttribute="trailing" id="bNW-ID-aI5"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Vsc-0g-flf" secondAttribute="bottom" id="hAI-qH-Hr2"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Vsc-0g-flf"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="LYK-cG-GVV"/>
+                                <exclude reference="WOF-0z-GRG"/>
+                                <exclude reference="bNW-ID-aI5"/>
+                                <exclude reference="hAI-qH-Hr2"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Vsc-0g-flf"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="LYK-cG-GVV"/>
+                                <include reference="WOF-0z-GRG"/>
+                                <include reference="bNW-ID-aI5"/>
+                                <include reference="hAI-qH-Hr2"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title=" 支付宝测试" id="Cge-if-osc"/>
+                    <connections>
+                        <outlet property="productTableView" destination="Vsc-0g-flf" id="hHE-A0-Cw2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="744" y="64.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="aNg-DB-XRG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="p4O-5S-cQa" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dRw-cB-EKL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="s9c-Kp-CPJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fnn-Vq-Tn7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-334.5" y="197.25"/>
+        </scene>
+    </scenes>
+</document>
