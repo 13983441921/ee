@@ -22,7 +22,7 @@
 @property(strong)NSString *authType;
 @property(strong)NSString *signDate;
 @property(strong)NSString *service;
-
+///wef
 
 
 - (NSString *)description;
